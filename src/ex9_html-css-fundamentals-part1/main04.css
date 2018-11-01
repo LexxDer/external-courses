@@ -1,0 +1,26 @@
+table {
+    border-collapse: collapse;
+    margin: 100px;
+}
+td {
+    border: 1px solid;
+  
+}    
+    
+input {
+  display: none;
+}
+label {
+  display: block;
+  width: 133px;
+  height: 133px;
+}
+
+input:checked + label::before {
+  display: flex;
+  content: '♘';
+  font-size: 100px;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}

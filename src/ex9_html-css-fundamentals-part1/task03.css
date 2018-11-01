@@ -1,5 +1,5 @@
 .d1 {
-    width: 200px;
+    width: 180px;
     height: 50px;
     border: 1px solid gray;
     margin: 50px;
@@ -7,7 +7,7 @@
 }
 .d2 {
     position: absolute;
-    width: 198px;
+    width: 178px;
     height: 48px;
     border: 0px solid;
     background: #cecece;
@@ -16,27 +16,34 @@
 }
 .d3 {
     position: relative;
-    width: 184px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 164px;
     height: 34px;
     border: 0px solid gray;
     background: linear-gradient(to top, #949494, #fff);
-    border-radius: 8px;  
+    border-radius: 8px;
     top: -1px;
     left: -1px;
 }
-.shadow { 
-    width: 184px;
+.shadow {
+    width: 164px;
     height: 34px;
     margin: 7px;
     background-color: #757575;
     border-radius: 8px;
    
 }
-span {
-    position: relative;
+.text {
     color: #565656;
     font-weight: bold;
     font-family: Arial;
-    left: 48px;
-    top: 7px;
+
+}
+.star {
+    position: relative;
+    color: #888888;
+    font-size: 26px;
+    top: -2px;
 }
