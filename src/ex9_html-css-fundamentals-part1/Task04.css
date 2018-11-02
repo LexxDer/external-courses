@@ -21,6 +21,5 @@ input:checked + label::before {
   content: '♘';
   font-size: 100px;
   justify-content: center;
-  align-items: center;
   color: red;
 }

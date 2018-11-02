@@ -1,0 +1,37 @@
+#d1 {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    background: rgb(47, 255, 175);
+    box-shadow: 10px 10px 0 rgb(99, 255, 195), 20px 20px 0 rgb(182, 255, 227);
+}
+
+#d2{
+    display: inline-block;
+    position: relative;
+	width: 400px;
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    background: rgb(47, 255, 175);
+}
+
+#d2::after, #d2::before {
+    display: inline-block;
+	content: '';
+	position: absolute;
+	width: 400px;
+    height: 400px;
+	z-index: -1;
+}
+
+#d2::after {
+	background:rgb(99, 255, 195);
+	top: 10px; left: 10px;
+}
+
+#d2::before {
+    background: rgb(182, 255, 227);
+    top: 20px; left: 20px;
+}
