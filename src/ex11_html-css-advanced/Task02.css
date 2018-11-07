@@ -1,0 +1,68 @@
+.loader {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 5px solid #FFBF40;
+    border-radius: 50%;
+    border-top-color: #4671D5;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    animation: 2s spin infinite linear;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.jump {
+    position: relative;
+    width: 400px;
+    height: 800px;
+}
+
+.jump__up {
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    top: 0;
+    left: calc(50% - 150px);
+    background: #38B2CE;
+    border-radius: 20px;
+}
+
+.jump__down {
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    bottom: 0%;
+    left: calc(50% - 150px);
+    background: #38B2CE;
+    border-radius: 20px;
+}
+
+.jump__jumper {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: calc(50% - 25px);
+    bottom: 60px;
+    border-radius: 50%;
+    background: #FF9F40;
+    animation: 1s ball infinite linear;
+    animation-direction: alternate;
+}
+
+@keyframes ball {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-630px);
+    }
+}
