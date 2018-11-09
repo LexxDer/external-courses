@@ -1,5 +1,9 @@
+body {
+    display: flex;
+    justify-content: space-between;
+}
 .loader {
-    position: absolute;
+    position: fixed;
     width: 80px;
     height: 80px;
     border: 5px solid #FFBF40;
@@ -8,7 +12,7 @@
     top: calc(50% - 40px);
     left: calc(50% - 40px);
     animation: 2s spin infinite linear;
-
+    z-index: 1;
 }
 
 @keyframes spin {
@@ -64,5 +68,43 @@
     }
     100% {
         transform: translateY(-630px);
+    }
+}
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    border-radius: 50%;
+    top: 50%;
+    right: 0%;
+    margin-right: 50px;
+    animation: 5s circ infinite;
+}
+
+@keyframes circ {
+    0% {
+        background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    }
+    15% {
+        border-radius: 0%;
+    }
+    30% {
+        background: linear-gradient(to right, #F6EFD2, #CEAD78);
+    }
+    45% {
+        width: 200px;
+        height: 200px;
+        transform: skew(-30deg,-30deg);
+    }
+    60% {
+        transform: rotate(720deg);
+    }
+    75% {
+        background: linear-gradient(to top left, powderblue, pink);
+    }
+    100% {
+        border-radius: 50%;
     }
 }
