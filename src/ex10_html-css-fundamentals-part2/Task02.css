@@ -1,0 +1,27 @@
+#table {
+    border: 3px solid white;
+    background: #f2f6fa;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.table__row td, th{
+    border: 2px solid white;
+    padding: 1rem;
+}
+
+.table__row td{
+    color: #4c6782;
+    font-family: Arial;
+}
+
+.table__row th {
+    padding: 0.2rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #758697;
+}
+
+.table__row--column_1 {
+    text-transform: capitalize;
+}
