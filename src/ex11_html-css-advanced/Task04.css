@@ -37,7 +37,7 @@ header {
     width: 200px;
 }
 
-.main__sidebar > div {
+.main__sidebar div {
     margin-bottom: 4px;
     background-color: #1F2637;
     border-top: 1px solid #282F41;
@@ -74,7 +74,6 @@ header {
     text-transform: uppercase;
     content: "\f067";
 }
-
 
 .main__sidebar--logout-panel a:hover {
     color: #fff;
@@ -137,22 +136,17 @@ header {
     list-style-type: disc;
     list-style-position: inside;
     padding: 16px 0 13px; 
-    
-    
 }
 
 .main__sidebar--genres-menu span {
     font-size: 13px;
     font-weight: 400;
     line-height: 26px;
-    
 }
 
 .main__sidebar--genres-menu ul > li {
     padding: 6px 15px 6px 25px;
     cursor: pointer;
-   
-    
 }
 
 .main__sidebar--genres-menu li span {
@@ -182,6 +176,46 @@ header {
 
 .main__sidebar--genres-menu ul li:hover span {
     color: #ffffff;
+}
+
+.main__sidebar div:last-child {
+    background-color: #1F2637;
+    border-top: 1px solid #282F41;
+    margin-bottom: 0;    
+    flex: 1 1 auto;
+    border-bottom: none;
+}
+
+.history-list {
+    list-style-type: disc;
+    margin: 0;
+    padding: 27px 0 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.history-list b {
+    
+    font-weight: 400;
+    color: #97b3ce;
+}
+
+.history-list li:before {
+    margin-right: 10px;
+    font: normal normal normal 14px/1 'FontAwesome';
+    content: "\f017";
+}
+
+.history-list li {
+    display: flex;
+    padding: 6px 19px 23px 21px;
+    color: #6f7d95;
+    background-color: #1f2637;
+}
+
+.history-time {
+    display: block;
+    margin-top: 8px;
 }
 
 .main__app--top-panel span {
@@ -253,7 +287,6 @@ button {
     background-color: transparent;
     border: none;
     outline: none;
-
 }
 
 button:before {
