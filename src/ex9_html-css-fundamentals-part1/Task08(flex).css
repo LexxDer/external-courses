@@ -1,0 +1,33 @@
+body {
+  padding: 30px;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+header {
+ flex: 100%;
+ background: lightblue;
+}
+
+section {
+  box-sizing: border-box;
+  flex: 75%;
+  background: lightgreen;
+}
+
+article {
+  background: white;
+  margin: 0 0 1rem 0;
+}
+
+aside {
+  flex: 25%;
+  background: pink;
+}
+
+header, article, section, .module {
+  padding: 1rem;
+}
