@@ -9,6 +9,7 @@ function Hangman(word) {
     for (var i = 0; i < this.word.length; i++) {
         this.answer[i] = "_";
     };
+    this.answer = this.answer.join("");
 
 
     this.guess = function (letter) {
@@ -41,7 +42,7 @@ function Hangman(word) {
     };
 
     this.getGuessedString = function () {
-        console.log(this.answer.join(""));
+        console.log(this.answer);
         return this;
     };
 
@@ -56,9 +57,9 @@ function Hangman(word) {
     };
 
     this.getStatus = function () {
-        if (this.answer.join("") === this.word) {
-            console.log(this.answer.join("") + " | you won!");
-        } else { console.log(this.answer.join("") + " | errors left " + this.errorsLeft) };
+        if (this.answer === this.word) {
+            console.log(this.answer + " | you won!");
+        } else { console.log(this.answer + " | errors left " + this.errorsLeft) };
         return this;
     };
 
@@ -73,6 +74,7 @@ function Hangman(word) {
         for (var i = 0; i < this.word.length; i++) {
             this.answer[i] = "_";
         }
+        this.answer = this.answer.join("");
         return this;
     };
 
