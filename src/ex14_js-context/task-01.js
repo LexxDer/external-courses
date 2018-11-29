@@ -1,46 +1,47 @@
-var Calculator = {
+var Calculator = function () {
+    var x = 0;
 
-    x: 0,
+    return {
+        add: function (y) {
+            x += y;
+            return this;
+        },
 
-    add: function (y) {
-        this.x += y;
-        return this;
-    },
+        subtract: function (y) {
+            x -= y;
+            return this;
+        },
 
-    subtract: function (y) {
-        this.x -= y;
-        return this;
-    },
+        multiply: function (y) {
+            x *= y;
+            return this;
+        },
 
-    multiply: function (y) {
-        this.x *= y;
-        return this;
-    },
+        divide: function (y) {
+            x /= y;
+            return this;
+        },
 
-    divide: function (y) {
-        this.x /= y;
-        return this;
-    },
+        getResult: function () {
+            return x;
+        },
 
-    getResult: function () {
-        return this.x;
-    },
+        setState: function (y) {
+            x = y;
+            return this;
+        },
 
-    setState: function (y) {
-        this.x = y;
-        return this;
-    },
+        reset: function () {
+            x = 0;
+            return this;
+        },
 
-    reset: function () {
-        this.x = 0;
-        return this;
-    },
-
-    fetchData: function () {
-
-        setTimeout(function () {
-            this.x = 500;
-        }, 500);
+        fetchData: function (callback) {
+            x = 500;
+            setTimeout(callback, 1000, x);
+            return this;
+        }
     }
+}();
 
-};
+module.exports = Calculator;
