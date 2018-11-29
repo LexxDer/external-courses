@@ -38,8 +38,8 @@ function Hangman(word) {
     };
 
     this.getGuessedString = function () {
-        console.log(this.answer);
-        return this.answer;
+        console.log(this.answer.join(''));
+        return this.answer.join('');
     };
 
     this.getErrorsLeft = function () {
@@ -54,8 +54,8 @@ function Hangman(word) {
 
     this.getStatus = function () {
         if (this.answer === this.word) {
-            console.log(this.answer + " | you won!");
-        } else { console.log(this.answer + " | errors left " + this.errorsLeft) };
+            console.log(this.answer.join('') + " | you won!");
+        } else { console.log(this.answer.join('') + " | errors left " + this.errorsLeft) };
     };
 
     this.startAgain = function (newWord) {
