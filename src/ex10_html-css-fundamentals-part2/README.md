@@ -60,11 +60,7 @@
     />
 </p>
 
-<<<<<<< HEAD
 ## Задание 3
-=======
-## Задание 8
->>>>>>> change tasks for 9 and 10 parts
 
 Создайте адаптивную страницу. Макет скачать по [ссылке](https://drive.google.com/drive/folders/1NS38C7K_qvMdKjj85KeeUXjfVk3yCiQB?usp=sharing) - Portal_UI.psd
 
