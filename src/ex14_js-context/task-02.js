@@ -7,7 +7,7 @@ function Hangman(word) {
     this.answer = [];
     for (var i = 0; i < this.word.length; i++) {
         this.answer[i] = "_";
-    }
+    };
 
 
     this.guess = function (letter) {
@@ -78,3 +78,5 @@ function Hangman(word) {
 
 
 }
+
+module.exports = Hangman;
