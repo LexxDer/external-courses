@@ -37,7 +37,6 @@ function Hangman(word) {
             } else console.log("One letter");
 
         } else console.log("You lost. New game?");
-        this.getStatus();
         return this;
     };
 
