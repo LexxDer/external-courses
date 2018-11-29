@@ -1,3 +1,4 @@
+'use strict'
 function Hangman(word) {
     this.word = word;
 
@@ -79,4 +80,4 @@ function Hangman(word) {
 
 }
 
-module.exports = Hangman;
+module.exports = new Hangman('webpurple');
