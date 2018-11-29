@@ -2,22 +2,22 @@ var Calculator = function () {
     var x = 0;
 
     return {
-        add: function (y=0) {
+        add: function (y = 0) {
             x += y;
             return this;
         },
 
-        subtract: function (y=0) {
-                x -= y;    
+        subtract: function (y = 0) {
+            x -= y;
             return this;
         },
 
-        multiply: function (y=1) {
+        multiply: function (y = 1) {
             x *= y;
             return this;
         },
 
-        divide: function (y=1) {
+        divide: function (y = 1) {
             x /= y;
             return this;
         },
@@ -27,7 +27,7 @@ var Calculator = function () {
         },
 
         setState: function (y) {
-            if (state) {
+            if (y) {
                 x = y;
             }
             return this;
