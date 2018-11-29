@@ -1,20 +1,15 @@
 function Hangman(word) {
     this.word = word;
-
     this.errorsLeft = 6;
     this.wrongSymbols = [];
-
     this.answer = [];
     this.answer = new Array(word.length).fill('_');
-
 
     this.guess = function (letter) {
         var flagSearch = 0;
 
         if (this.errorsLeft !== 0) {
-
             if (letter.length === 1) {
-
                 letter = letter.toLowerCase();
 
                 for (var j = 0; j < this.word.length; j++) {
@@ -30,10 +25,10 @@ function Hangman(word) {
                     }
 
                 }
-
             } else console.log("One letter");
 
         } else console.log("You lost. New game?");
+        
         return this;
     };
 
@@ -60,17 +55,13 @@ function Hangman(word) {
 
     this.startAgain = function (newWord) {
         this.word = newWord;
-
-
         this.errorsLeft = 6;
         this.wrongSymbols = [];
-
         this.answer = [];
         this.answer = new Array(word.length).fill('_');
 
         return this;
     };
-
 
 }
 
