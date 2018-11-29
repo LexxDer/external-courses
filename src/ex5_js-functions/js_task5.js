@@ -67,11 +67,3 @@ function makeCalculator() {
 }
 
 var calculator = makeCalculator();
-
-console.log(calculator.getResult());
-calculator.multiply(3)(3);
-console.log(calculator.getResult());
-calculator.add(3);
-console.log(calculator.getResult());
-calculator.divide(3)(3);
-console.log(calculator.getResult());
