@@ -43,24 +43,23 @@ function Hangman(word) {
 
     this.getGuessedString = function () {
         console.log(this.answer);
-        return this;
+        return this.answer;
     };
 
     this.getErrorsLeft = function () {
         console.log(this.errorsLeft);
-        return this;
+        return this.errorsLeft;
     };
 
     this.getWrongSymbols = function () {
         console.log(this.wrongSymbols);
-        return this;
+        return this.wrongSymbols;
     };
 
     this.getStatus = function () {
         if (this.answer === this.word) {
             console.log(this.answer + " | you won!");
         } else { console.log(this.answer + " | errors left " + this.errorsLeft) };
-        return this;
     };
 
     this.startAgain = function (newWord) {
