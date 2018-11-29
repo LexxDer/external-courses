@@ -1,4 +1,3 @@
-'use strict'
 function Hangman(word) {
     this.word = word;
 
@@ -6,10 +5,7 @@ function Hangman(word) {
     this.wrongSymbols = [];
 
     this.answer = [];
-    for (var i = 0; i < this.word.length; i++) {
-        this.answer[i] = "_";
-    };
-    this.answer = this.answer.join("");
+    this.answer = new Array(word.length).fill('_');
 
 
     this.guess = function (letter) {
@@ -70,14 +66,12 @@ function Hangman(word) {
         this.wrongSymbols = [];
 
         this.answer = [];
-        for (var i = 0; i < this.word.length; i++) {
-            this.answer[i] = "_";
-        }
-        this.answer = this.answer.join("");
+        this.answer = new Array(word.length).fill('_');
+
         return this;
     };
 
 
 }
 
-module.exports = new Hangman('webpurple');
+module.exports = Hangman;
