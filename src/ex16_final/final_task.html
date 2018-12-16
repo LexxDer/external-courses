@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="fonts/ProximaNova.css">
+    <link rel="stylesheet" href="fonts/FontAwesome.min.css">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div class="main">
+        <div class="main__sidebar">
+
+            <div class="main__sidebar--logout-panel">
+                <a href="">add a book</a>
+            </div>
+
+            <div class="main__sidebar--books-menu">
+                <ul>
+                    <li class="book">Now Reading</li>
+                    <li class="globe">Browse</li>
+                    <li class="shoping-cart">Buy Books</li>
+                    <li class="star">Favourite Books</li>
+                    <li class="list">Whishlist</li>
+                    <li class="clock">History</li>
+                </ul>
+            </div>
+
+            <div class="main__sidebar--genres-menu">
+                <ul>
+                    <li><span>Must Read Titles</span></li>
+                    <li><span>Best Of List</span></li>
+                    <li><span>Classic Novels</span></li>
+                    <li><span>Non Fiction</span></li>
+                </ul>
+            </div>
+
+            <div class="main__sidebar--history-list">
+                <ul class="history-list">
+                    <li>
+                        <span>You added <b>Fight Club</b> by <b>Chuck Palahniuk</b> to your <b>Must Read Titles</b>.<span
+                                class="history-time">24 minutes ago</span></span>
+                    </li>
+                    <li>
+                        <span>You added <b>The Trial</b> by <b>Franz Kafka</b> to your <b>Must Read Titles</b>.<span
+                                class="history-time">48 minutes ago</span></span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="main__app">
+            <div class="main__app--top-panel">
+                <span>Browse Available Books</span>
+            </div>
+            <div class="main__app--filter-search">
+                <div id="main__app--filter">
+                    <input type="radio" name="filter" id="all">
+                    <label for="all">All Books</label>
+                    <input type="radio" name="filter" id="recent">
+                    <label for="recent">Most Recent</label>
+                    <input type="radio" name="filter" id="pop">
+                    <label for="pop">Most Popular</label>
+                    <input type="radio" name="filter" id="free">
+                    <label for="free">Free Books</label>
+                </div>
+                <form class="main__app--search" action="#" method="POST">
+                    <input type="text" name="search" placeholder="Enter Keywords">
+                    <button type="submit" name="submit"></button>
+                </form>
+            </div>
+            <div id="wrapperbooks">
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <footer>
+            <button onclick="fun1()">Проверить, какой из элементов выбран</button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

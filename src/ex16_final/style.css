@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Proxima Nova Rg';
+    margin: 0 auto;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    border-radius: 5px 5px 0 0;
+    background-color: #2f364a;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    height: 45px;
+}
+
+.main__sidebar {
+    width: 200px;
+    background-color: #181e2c;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    position: fixed;
+    overflow-y: auto;
+    top: 45px;
+    bottom: 45px;
+    width: 200px;
+}
+
+.main__sidebar div {
+    margin-bottom: 4px;
+    background-color: #1F2637;
+    border-top: 1px solid #282F41;
+    border-bottom: 1px solid #141824;
+}
+
+.main__sidebar > div:first-child {
+    border-top: none;
+}
+
+.main__sidebar--logout-panel a {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 44px;
+    border-radius: 4px;
+    padding: 18px 0 16px;
+    line-height: 26px;
+    color: black;
+    text-transform: uppercase;
+    background-color: #f2795a;
+    margin: 35px auto;
+}
+
+.main__sidebar--logout-panel a:before { 
+    width: 13px;
+    height: 13px;
+    font: normal normal normal 14px/1 'FontAwesome';
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 18px;
+    text-transform: uppercase;
+    content: "\f067";
+}
+
+.main__sidebar--logout-panel a:hover {
+    color: #fff;
+    background-color: #df5e3e;
+}
+
+.main__sidebar--books-menu {
+    padding-bottom: 12px;
+}
+
+.main__sidebar--books-menu li {
+    display: flex;
+    align-items: center;
+    padding: 14px 21px;
+    color: #78829d;
+    background-color: #1f2637;
+    font-weight: 400;
+    line-height: 26px;
+    cursor: pointer;
+    font-size: 13px;
+    height: 38px;
+}
+
+.main__sidebar--books-menu li:before {
+    font: normal normal normal 14px/1 'FontAwesome';
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.main__sidebar--books-menu li:hover {
+    background-color: #15a4fa;
+    color: #ffffff;
+}
+
+.book:before {
+    content: "\f02d";
+}
+
+.globe:before {
+    content: "\f0ac";
+}
+
+.shoping-cart:before {
+    content: "\f07a";
+}
+
+.star:before {
+    content: "\f005";
+}
+
+.list:before {
+    content: "\f00b";
+}
+
+.clock:before {
+    content: "\f017";
+}
+
+.main__sidebar--genres-menu ul{
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 16px 0 13px; 
+}
+
+.main__sidebar--genres-menu span {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.main__sidebar--genres-menu ul > li {
+    padding: 6px 15px 6px 25px;
+    cursor: pointer;
+}
+
+.main__sidebar--genres-menu li span {
+    color: #78829d;
+}
+
+.main__sidebar--genres-menu li:nth-child(1) {
+    color: #e64c66;
+}
+
+.main__sidebar--genres-menu li:nth-child(2) {
+    color: #ffab00;
+}
+
+.main__sidebar--genres-menu li:nth-child(3) {
+    color: #15a4fa;
+}
+
+.main__sidebar--genres-menu li:nth-child(4) {
+    color: #7874cf;
+}
+
+.main__sidebar--genres-menu ul li:hover {
+    background-color: #15a4fa;
+    color: #ffffff;
+}
+
+.main__sidebar--genres-menu ul li:hover span {
+    color: #ffffff;
+}
+
+.main__sidebar div:last-child {
+    background-color: #1F2637;
+    border-top: 1px solid #282F41;
+    margin-bottom: 0;    
+    flex: 1 1 auto;
+    border-bottom: none;
+}
+
+.history-list {
+    list-style-type: disc;
+    margin: 0;
+    padding: 27px 0 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.history-list b {
+    
+    font-weight: 400;
+    color: #97b3ce;
+}
+
+.history-list li:before {
+    margin-right: 10px;
+    font: normal normal normal 14px/1 'FontAwesome';
+    content: "\f017";
+}
+
+.history-list li {
+    display: flex;
+    padding: 6px 19px 23px 21px;
+    color: #6f7d95;
+    background-color: #1f2637;
+}
+
+.history-time {
+    display: block;
+    margin-top: 8px;
+}
+.main__app {
+    position: fixed;
+    right: 0;
+    left: 200px;
+}
+
+.main__app--top-panel {
+    padding: 23px 20px 19px;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    background-color: #eef1f7;
+    border-bottom: 1px solid #DADFEA;
+}
+
+.main__app--top-panel span { 
+    color: #444c63;
+}    
+
+.main__app--filter-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #eef1f7;
+    border-top: 1px solid #F4F6FA;
+    border-bottom: 1px solid #DADFEA;
+    padding: 0 20px;
+}
+
+#main__app--filter input {
+    display: none;
+}
+
+#main__app--filter label {
+    margin-right: 6px;
+    padding: 1px 11px 0;
+    font-size: 12px;
+    line-height: 19px;
+    color: #8c97b2;
+}
+
+#main__app--filter label:hover,
+#main__app--filter input:checked + label {
+    color: #fff;
+    background-color: #97B3CE;
+    border-radius: 9.5px;
+    cursor: pointer;
+}
+
+.main__app--search {
+    position: relative;
+}
+
+input {
+    width: 400px;
+    height: 32px;
+    padding: 2px 19px;
+    font-size: 13px;
+    line-height: 26px;
+    color: #8c97b2;
+    border: 1px solid #C7CDDB;
+    border-radius: 15.5px;
+    outline: none;
+}
+
+button {
+    position: absolute;
+    top: 8px;
+    right: 19px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+button:before {
+    font-size: 14px;
+    line-height: 26px;
+    color: #8c97b2;
+    font: normal normal normal 14px/1 'FontAwesome';
+    content: "\f002"
+}
+.main {
+    position: relative;
+    top: 45px;
+    bottom: 45px;
+    width: 100%;
+    height: 100%;
+}
+
+#wrapperbooks {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-height: 900px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.books {
+    width: 250px;
+    height: 405px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cover {
+    width: 250px;
+    height: 275px;
+    margin-top: 30px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    background-color: #181E2C;
+    overflow: hidden;
+}
