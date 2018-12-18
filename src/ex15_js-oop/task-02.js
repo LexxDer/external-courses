@@ -4,8 +4,8 @@ var shape = {
         return this.type;
     },
 
-    getPerimeter: function () {
-        return this.perimetr;
+    getPerimeter: function(){
+        return this.edges.reduce((a,b)=>a+b, 0)
     },
 
     draw: function () {
@@ -15,32 +15,25 @@ var shape = {
 }
 
 function Triangle(name, a, b, c) {
-    this.a = a;
-    this.b = b;
-    this.c = c;
     this.type = "Triangle";
-    this.perimetr = a + b + c;
+    this.edges = [a, b, c];
     this.name = name;
 }
 
 Triangle.prototype = shape;
 Triangle.prototype.constructor = Triangle;
 
-function Square(name, a, b, c, d) {
-    this.a = a;
-    this.b = b;
-    this.c = c;
-    this.d = d;
+function Square(name, a, b) {
     this.type = "Square";
-    this.perimetr = a + b + c + d;
+    this.edges = [a, b, a, b];
     this.name = name;
 }
 
 Square.prototype = shape;
 Square.prototype.constructor = Square;
 
-function Parallelogram(name, a, b, c, d, rad) {
-    Square.call(this, name, a, b, c, d);
+function Parallelogram(name, a, b, rad) {
+    Square.call(this, name, a, b);
     this.rad = rad;
 }
 

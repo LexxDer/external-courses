@@ -1,48 +1,47 @@
 function Calculator() {
     this.x = 0;
+}
 
-    this.add = function (y = 0) {
-        this.x += y;
-        return this;
-    };
+Calculator.prototype.add = function (y = 0) {
+    this.x += y;
+    return this;
+};
 
-    this.subtract = function (y = 0) {
-        this.x -= y;
-        return this;
-    };
+Calculator.prototype.subtract = function (y = 0) {
+    this.x -= y;
+    return this;
+};
 
-    this.multiply = function (y = 1) {
-        this.x *= y;
-        return this;
-    };
+Calculator.prototype.multiply = function (y = 1) {
+    this.x *= y;
+    return this;
+};
 
-    this.divide = function (y = 1) {
-        this.x /= y;
-        return this;
-    };
+Calculator.prototype.divide = function (y = 1) {
+    this.x /= y;
+    return this;
+};
 
-    this.getResult = function () {
-        return this.x;
-    };
+Calculator.prototype.getResult = function () {
+    return this.x;
+};
 
-    this.setState = function (y) {
-        if (y) {
-            this.x = y;
-        }
-        return this;
-    };
-
-    this.reset = function () {
-        this.x = 0;
-        return this;
-    };
-
-    this.fetchData = function (callback) {
-        this.x = 500;
-        setTimeout(callback, 1000, this.x);
-        return this;
+Calculator.prototype.setState = function (y) {
+    if (y) {
+        this.x = y;
     }
+    return this;
+};
 
+Calculator.prototype.reset = function () {
+    this.x = 0;
+    return this;
+};
+
+Calculator.prototype.fetchData = function (callback) {
+    this.x = 500;
+    setTimeout(callback, 1000, this.x);
+    return this;
 }
 
 function SimpleCalc() {
@@ -59,22 +58,22 @@ function ProgCalc() {
 ProgCalc.prototype = Object.create(Calculator.prototype);
 ProgCalc.prototype.constructor = ProgCalc;
 
-ProgCalc.prototype.getBin = function(num) {
+ProgCalc.prototype.getBin = function (num) {
     this.x = num.toString(2);
     return this;
 }
 
-ProgCalc.prototype.getBin = function(num) {
+ProgCalc.prototype.getBin = function (num) {
     this.x = num.toString(2);
     return this;
 }
 
-ProgCalc.prototype.getOct = function(num) {
+ProgCalc.prototype.getOct = function (num) {
     this.x = num.toString(8);
     return this;
 }
 
-ProgCalc.prototype.getHex = function(num) {
+ProgCalc.prototype.getHex = function (num) {
     this.x = num.toString(16);
     return this;
 }
@@ -86,12 +85,12 @@ function EngCalc() {
 EngCalc.prototype = Object.create(Calculator.prototype);
 EngCalc.prototype.constructor = EngCalc;
 
-EngCalc.prototype.getSin = function(rad) {
+EngCalc.prototype.getSin = function (rad) {
     this.x = Math.sin(rad);
     return this;
 }
 
-EngCalc.prototype.getCos = function(rad) {
+EngCalc.prototype.getCos = function (rad) {
     this.x = Math.sin(rad);
     return this;
 }
@@ -105,12 +104,12 @@ function BookerCalc(cursUsd) {
 BookerCalc.prototype = Object.create(Calculator.prototype);
 BookerCalc.prototype.constructor = BookerCalc;
 
-BookerCalc.prototype.getRub = function(usd) {
+BookerCalc.prototype.getRub = function (usd) {
     this.x = this.cursRub * usd;
     return this;
 }
 
-BookerCalc.prototype.getUsd = function(rub) {
+BookerCalc.prototype.getUsd = function (rub) {
     this.x = this.cursUsd * rub;
     return this;
 }
