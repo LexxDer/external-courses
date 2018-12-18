@@ -95,7 +95,7 @@ var booksData = [
 var booksFree = booksData.filter(filterByFree);
 
 function filterByFree(item) {
-    if (item.price === '0') { return true; }
+    return item.price === '0';
 }
 
 // фильтрация книг по дате
@@ -162,30 +162,34 @@ function setMenuClass() {
 
     for (var i = 0; i < filter_select_el.length; i++) {
         if (filter_select_el[i].type === "radio" && filter_select_el[i].checked) {
-            
-            if (filter_select_el[i].id === 'all') {
-                booksData.forEach(function (item) {
-                    var bookItem = createBook(item);
-                    bookList.appendChild(bookItem);
-                })
-            }
-            else if (filter_select_el[i].id === 'recent') {
-                booksMostRecent.forEach(function (item) {
-                    var bookItem = createBook(item);
-                    bookList.appendChild(bookItem);
-                })
-            }
-            else if (filter_select_el[i].id === 'pop') {
-                booksMostViews.forEach(function (item) {
-                    var bookItem = createBook(item);
-                    bookList.appendChild(bookItem);
-                })
-            }
-            else if (filter_select_el[i].id === 'free') {
-                booksFree.forEach(function (item) {
-                    var bookItem = createBook(item);
-                    bookList.appendChild(bookItem);
-                })
+            switch (filter_select_el[i].id) {
+                case 'all':
+                    booksData.forEach(function (item) {
+                        var bookItem = createBook(item);
+                        bookList.appendChild(bookItem);
+                    });
+                    break;
+
+                case 'recent':
+                    booksMostRecent.forEach(function (item) {
+                        var bookItem = createBook(item);
+                        bookList.appendChild(bookItem);
+                    });
+                    break;
+
+                case 'pop':
+                    booksMostViews.forEach(function (item) {
+                        var bookItem = createBook(item);
+                        bookList.appendChild(bookItem);
+                    })
+                    break;
+
+                case 'free':
+                    booksFree.forEach(function (item) {
+                        var bookItem = createBook(item);
+                        bookList.appendChild(bookItem);
+                    })
+                    break;
             }
         }
     }
