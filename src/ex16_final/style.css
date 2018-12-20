@@ -251,7 +251,7 @@ header {
     display: none;
 }
 
-#main__app--filter label {
+#main__app--filter .filterLabel {
     margin-right: 6px;
     padding: 1px 11px 0;
     font-size: 12px;
@@ -259,8 +259,8 @@ header {
     color: #8c97b2;
 }
 
-#main__app--filter label:hover,
-#main__app--filter input:checked + label {
+#main__app--filter .filterLabel:hover,
+#main__app--filter input:checked + .filterLabel {
     color: #fff;
     background-color: #97B3CE;
     border-radius: 9.5px;
@@ -271,7 +271,7 @@ header {
     position: relative;
 }
 
-input {
+.search {
     width: 400px;
     height: 32px;
     padding: 2px 19px;
@@ -318,7 +318,8 @@ button:before {
 }
 
 .book {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
     justify-content: space-between;
     width: 250px;
@@ -347,6 +348,35 @@ button:before {
     color: #6f7d95;
     font-size: 12px;
 }
+
+.book__rating {
+    display: flex;
+    margin: auto;
+    flex-direction: row-reverse;
+    font: normal normal normal 40px/1 'FontAwesome';
+}
+
+.book__divRating {
+	cursor: pointer;
+    color: gold;
+}     
+
+.book__labelRating:before {
+    content: "\f006";
+}
+.book__divRating:hover,
+.book__divRating:hover ~ div {
+    color: #ff9800;
+}
+
+.fa-star {
+    content: "\f005"
+}
+
+.fa-star-o {
+    content: "\f006";
+}
+                
 footer {
     position: fixed;
     bottom: 0;
