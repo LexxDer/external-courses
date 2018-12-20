@@ -369,6 +369,7 @@ button:before {
 .book__labelRating:before {
     content: "\f006";
 }
+
 .book__divRating:hover,
 .book__divRating:hover ~ div {
     color: #ff9800;
