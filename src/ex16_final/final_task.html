@@ -17,7 +17,7 @@
         <div class="main__sidebar">
 
             <div class="main__sidebar--logout-panel">
-                <a href="">add a book</a>
+                <a href="" class="button-open">add a book</a>
             </div>
 
             <div class="main__sidebar--books-menu">
@@ -61,7 +61,7 @@
             <div class="main__app--filter-search">
                 <div id="main__app--filter">
                     <input type="radio" name="filter" id="all">
-                    <label class='filterLabel'for="all">All Books</label>
+                    <label class='filterLabel' for="all">All Books</label>
                     <input type="radio" name="filter" id="recent">
                     <label class='filterLabel' for="recent">Most Recent</label>
                     <input type="radio" name="filter" id="pop">
@@ -70,19 +70,39 @@
                     <label class='filterLabel' for="free">Free Books</label>
                 </div>
                 <form class="main__app--search" action="#" method="POST">
-                    <input class="search"type="text" name="search" placeholder="Enter Keywords">
+                    <input class="search" type="text" name="search" placeholder="Enter Keywords">
                     <button type="submit" name="submit"></button>
                 </form>
             </div>
             <div class="wrapperbooks">
                 <ul class="wrapperbooks__books">
-                </ul>    
+                </ul>
             </div>
         </div>
     </div>
-    <footer>
-            <button onclick="fun1()">Проверить, какой из элементов выбран</button>
-    </footer>
+    <div class="modal">
+        <div class="modal__content">
+            <h2 class="visually-hidden">ADD A BOOK</h2>
+            <h3>Title:</h3>
+            <input type="text" required id="Title">
+            <h3>Categories:</h3>
+            <input type="text" required id="Category">
+            <h3>Genres:</h3>
+            <input type="text" required id="Genres">
+            <h3>Author's firstname:</h3>
+            <input type="text" required id="FName">
+            <h3>Author's lastname:</h3>
+            <input type="text" required id="LName">
+            <h3>Price:</h3>
+            <input type="number" required id="Price">
+            <h3>Book cover (URL):</h3>
+            <input type="url" id="Cover">
+            <h3>Rating (1-5):</h3>
+            <input type="text" required pattern="[1-5]" id="Rating">
+            <button class="modal__button button-close" type="button">Закрыть</button>
+        </div>
+    </div>
+    <footer></footer>
     <script src="script.js"></script>
 </body>
 

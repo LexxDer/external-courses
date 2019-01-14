@@ -11,9 +11,10 @@ function getFromServer() {
     }
     xhr.open("GET", "https://rsu-library-api.herokuapp.com/books", true);
     xhr.send();
-}
+};
 
 document.addEventListener("DOMContentLoaded", getFromServer);
+
 
 function renderBooks(arr) {
     var bookList = document.querySelector('.wrapperbooks__books');
@@ -22,7 +23,7 @@ function renderBooks(arr) {
         var bookItem = createBook(item);
         bookList.appendChild(bookItem);
     });
-}
+};
 
 //создание элемента
 function makeElement(tagName, className, text) {
@@ -55,7 +56,6 @@ function createBook(books) {
 
     for (var i = 5; i >= 1; i--) {
         var divRating = makeElement('div', 'book__divRating');
-        divRating.htmlFor = "star_" + books.id + "#" + i;
 
         if (books.rating >= i) {
             divRating.classList.add('fa-star');
@@ -82,10 +82,10 @@ filter_select_el.forEach(function (item) {
 
 function setMenuClass() {
 
-    for (var i = 0; i < filter_select_el.length; i++) {
-        if (filter_select_el[i].type === "radio" && filter_select_el[i].checked) {
+    filter_select_el.forEach(function (item) {
+        if (item.type === "radio" && item.checked) {
             var newBooks = [];
-            switch (filter_select_el[i].id) {
+            switch (item.id) {
                 case 'all':
                     newBooks = booksData;
                     break;
@@ -102,5 +102,35 @@ function setMenuClass() {
 
             renderBooks(newBooks);
         }
+    })
+};
+
+//поиск
+var searchField = document.querySelector('.search');
+searchField.addEventListener('input', search);
+
+function search(event) {
+    var input = event.target.value.toLowerCase();
+    var searchBooks = [...booksData].filter(a => a.title.toLowerCase().indexOf(input) !== -1);
+    renderBooks(searchBooks);
+};
+
+//добавление книги
+var popup = document.querySelector('.modal');
+var openPopupButton = document.querySelector('.button-open');
+var closePopupButton = popup.querySelector('.button-close');
+
+openPopupButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    popup.classList.add('modal--show');
+});
+
+closePopupButton.addEventListener('click', function () {
+    popup.classList.remove('modal--show');
+});
+
+document.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+        popup.classList.remove('modal--show');
     }
-}
+});
